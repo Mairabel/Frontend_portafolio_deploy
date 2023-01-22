@@ -1,0 +1,57 @@
+/*-----------variables---------- */
+:root {
+    --color-global: #00ffff;
+}
+/*------------general------------*/
+* {
+    letter-spacing: 2px;
+}
+body {
+    background: #000000;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--color-global);
+    border-radius: 30px;
+}
+.seccion:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 30px 1px var(--color-global);
+    cursor: pointer;
+}
+/*scrool de habilidades y curriculum*/
+.campo {
+    overflow-y: scroll;
+    height: 290px;
+}
+.campo::-webkit-scrollbar {
+    width: 10px;
+}
+.campo::-webkit-scrollbar-thumb {
+    background: var(--color-global);
+    border-radius: 20px;
+}
+/*----------modal----------*/
+.modal-content{
+    background: linear-gradient(to top, rgba(11, 2, 65, 0.923), rgba(43, 4, 60, 0.734)), url("./assets/images/fondo.jpg");
+    box-shadow: 0px 1px 20px var(--color-global);
+}
+.modal-content:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 1px 30px darkblue;
+}
+/*----------scrool editor-modal----------*/
+.nombre {
+    overflow-y: scroll;
+    height: 450px;
+}
+.nombre::-webkit-scrollbar {
+    width: 10px;
+}
+.nombre::-webkit-scrollbar-thumb {
+    background: var(--color-global);
+    border-radius: 20px;
+}

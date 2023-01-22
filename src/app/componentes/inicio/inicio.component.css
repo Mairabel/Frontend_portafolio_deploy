@@ -1,0 +1,10 @@
+/*------------inicio------------*/
+.inicio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 5px 0px var(--color-global);
+    cursor: pointer;
+}
+#inicio {
+    background: linear-gradient(to top, rgb(0, 0, 4), rgba(0, 58, 110, 0.818)), url("../../../assets/images/fondo.jpg");
+    background-size: cover;
+}

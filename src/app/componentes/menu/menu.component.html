@@ -1,0 +1,34 @@
+<header>
+  <nav class="navbar navbar-expand fixed-top bg-black py-2">
+    <div class="option-logo-curso nav-link w-25 px-5 fs-6 fw-bolder text-center text-white" aria-current="page">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-terminal-fill"viewBox="0 0 16 16">
+        <path
+          d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm9.5 5.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zm-6.354-.354a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146z" />
+      </svg>
+      <p class="option-logo-curso my-1 ps-1 text-start">Argentina_Programa #YoProgramo</p>
+    </div>
+      <ul class="nav mx-auto">
+        <li class="px-1 my-1">
+          <a class="option nav-link rounded-2" href="#inicio">INICIO</a>
+        </li>
+        <li class="px-1 my-1">
+          <a class="option nav-link rounded-2" href="#sobre-mi">SOBRE MI</a>
+        </li>
+        <li class="px-1 my-1">
+          <a class="option nav-link rounded-2" href="#habilidades">HABILIDADES</a>
+        </li>
+        <li class="px-1 my-1">
+          <a class="option nav-link rounded-2" href="#curriculum">CURRICULUM</a>
+        </li>
+        <li class="px-1 my-1">
+          <a class="option nav-link rounded-2" href="#proyectos">PROYECTOS</a>
+        </li>
+        <li class="px-1 my-1">
+          <a class="option nav-link rounded-2" href="#contacto">CONTACTO</a>
+        </li>
+        <li class="px-2 my-1">
+          <a href="{{session.ruta_destino}}" class="option-login nav-link {{style}} rounded-2 btn">{{session.nombre_button}}</a>
+        </li>
+      </ul>
+  </nav>
+</header>

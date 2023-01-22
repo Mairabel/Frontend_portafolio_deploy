@@ -1,0 +1,5 @@
+/*--------------sobre mi--------------*/
+#sobre-mi {
+    background: linear-gradient(to top, rgb(3, 0, 82), rgba(61, 0, 57, 0.826)), url("../../../assets/images/fondo.jpg");
+    background-size: cover;
+}

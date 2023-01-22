@@ -1,0 +1,89 @@
+<!------------SECCION HABILIDADES--------------->
+<section class="w-100 p-5 text-white" id="habilidades">
+  <div class="seccion row mt-5 rounded-5 mx-auto {{style}}">
+    <div *ngIf="acceso" class="text-end px-3 pt-3">
+      <a type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#seccion-habilidades"data-bs-whatever="@getbootstrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-pencil"viewBox="0 0 16 16">
+          <path
+            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+        </svg>
+      </a>
+    </div>
+    <p class="fs-1 fw-bolder text-center">HABILIDADES</p>
+    <!--------habilidades tecnicas--------->
+    <div class="col mb-5">
+      <p class="mb-3 fs-2 text-center text-primary fw-boldtext fw-bold">Tecnicas</p>
+      <div class="campo p-2">
+        <div *ngFor="let habilidad of Get_habilidades_tecnicas()" class="col m-3">
+          <p class="m-1 fst-italic fs-6">{{habilidad.nombre}}</p>
+          <div class="barra p-1">
+            <div class="bg-white rounded-5">
+              <div class="bg-info w-{{habilidad.porcentaje}} rounded-5 text-black text-end d-flex justify-content-end pb-1 px-4">
+                <strong class="spinner-grow spinner-grow-sm bg-info fs-6"></strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------habilidades blandas--------->
+    <div class="col mb-5">
+      <p class="mb-3 fs-2 text-center text-primary fw-bold">Blandas</p>
+      <div class="campo p-2">
+        <div *ngFor="let habilidad of Get_habilidades_blandas()" class="col m-3">
+          <p class="m-1 fst-italic fs-6">{{habilidad.nombre}}</p>
+          <div class=" barra p-1">
+            <div class="bg-white rounded-5">
+              <div class="bg-info w-{{habilidad.porcentaje}} rounded-5 text-black text-end d-flex justify-content-end pb-1 px-4">
+                <strong class="spinner-grow spinner-grow-sm bg-info fs-6"></strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!------------------MODAL SECCION-HABILIDADES------------------------>
+ <div class="modal fade" id="seccion-habilidades" tabindex="-1" aria-labelledby="seccion-habilidadesLabel"aria-hidden="true">
+  <div class="modal-dialog position-absolute top-50 start-50 translate-middle w-100 h-100">
+    <div class="modal-content">
+      <div class="modal-header text-center border-info w-100 text-center">
+        <p class="modal-title text-info fs-6 fw-bold mx-auto px-5 fs-2" id="seccion-habilidadesLabel">HABILIDADES</p>
+        <button type="button" class="bg-danger btn-close btn btn-outline-danger m-0" data-bs-dismiss="modal"aria-label="Close"></button>
+      </div>
+      <div class="modal-body mt-3">
+        <div class="">
+          <p class="modal-title text-info fs-6 fw-bold mx-auto mb-2 px-1">Tecnicas</p>
+          <div class="input-group my-3">
+            <select class="form-select form-control bg-black opacity-75 border-info text-white" [(ngModel)]="selectedHabilidadTecnica.nombre">
+              <option value="" selected>Seleccionar</option>
+              <option *ngFor="let habilidad of Get_habilidades_tecnicas()" value="{{habilidad.nombre}}">{{habilidad.nombre}}</option>
+            </select>
+            <select class="form-select form-control bg-black opacity-75 border-info text-white" [(ngModel)]="selectedHabilidadTecnica.porcentaje">
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </div>
+          <p class="modal-title text-info fs-6 fw-bold mx-auto mb-2 px-1">Blandas</p>
+          <div class="input-group">
+            <select class="form-select form-control bg-black opacity-75 border-info text-white" [(ngModel)]="selectedHabilidadBlanda.nombre">
+              <option value="" selected>Seleccionar</option>
+              <option *ngFor="let habilidad of Get_habilidades_blandas()" value="{{habilidad.nombre}}">{{habilidad.nombre}}</option>
+            </select>
+            <select class="form-select form-control bg-black opacity-75 border-info text-white" [(ngModel)]="selectedHabilidadBlanda.porcentaje">
+              <option value="25">25%</option>
+              <option value="50">50%</option>
+              <option value="75">75%</option>
+              <option value="100">100%</option>
+            </select>
+          </div>
+        </div>
+        <div *ngIf="mensaje">{{mensaje}}</div>
+        <button (click)="Guardar()" type="button" class="btn btn-outline-info px-4 fw-bold mt-5 mb-3">GUARDAR</button>
+      </div>
+    </div>
+  </div>
+</div>

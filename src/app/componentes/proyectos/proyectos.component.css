@@ -1,0 +1,5 @@
+/*proyectos*/
+#proyectos {
+    background: linear-gradient(to top, rgb(67, 2, 47), rgba(2, 69, 73, 0.885)), url("../../../assets/images/fondo.jpg");
+    background-size: cover;
+}

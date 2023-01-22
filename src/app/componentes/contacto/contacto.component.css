@@ -1,0 +1,5 @@
+/*----------contacto-----------*/
+#contacto {
+    background: linear-gradient(to top, rgb(69, 4, 4), rgba(9, 1, 52, 0.876)), url("../../../assets/images/fondo.jpg");
+    background-size: cover
+}

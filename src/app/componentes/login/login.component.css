@@ -1,0 +1,15 @@
+/*--------------login--------------*/
+.login-container {
+    background: linear-gradient(to top, rgb(2, 3, 43), rgb(0, 0, 0));
+    background-size: cover;
+}
+.login:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 20px 25px rgb(4, 1, 50);
+}
+.login {
+    cursor: pointer;
+    background: linear-gradient(to top, rgba(17, 2, 105, 0.544), rgba(1, 0, 15, 0.881)), url("../../../assets/images/login.jpg");
+    box-shadow: 0px 1px 20px var(--color-global);
+}

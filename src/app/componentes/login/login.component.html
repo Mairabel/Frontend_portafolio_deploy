@@ -1,0 +1,26 @@
+<!--SECCION LOGIN MODAL-->
+<header class="login-container h-100 w-100 p-5">
+    <div class="login rounded-2 border border-info border-opacity-75 h-50 w-50 mx-auto my-5 mb-5">
+        <div class="text-end m-2">
+            <a href="/" class="btn btn-outline-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="border-bottom border-opacity-25 border-info pt-2 px-5">
+            <h5 class="fw-bold text-center text-info fs-2 p-2">INICIAR SECION</h5>
+        </div>
+        <div class="pt-5 px-5 pb-4">
+            <input type="text" name="nombre" [(ngModel)] = "selectedUsuario.nombre" class="form-control bg-black opacity-75 border-info my-5 fw-bold text-white" placeholder="Usuario...">
+            <input type="password" name="clave" [(ngModel)] = "selectedUsuario.clave" class="form-control bg-black opacity-75 border-info my-5 fw-bold text-white" placeholder="Contraseña...">
+            <div *ngIf="mensaje_error">
+                <p class="text-danger fs-4 px-2 rounded-2">{{mensaje_error}}</p>   
+            </div>
+            <div (click)="Acceso_login()" class="border-opacity-25 border-info text-end mb-4">
+                <a type="button" class="btn btn-outline-info px-4 fw-semibold">ACCEDER</a>
+            </div>
+        </div>
+        
+    </div>
+</header>
